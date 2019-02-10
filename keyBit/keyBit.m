@@ -2,13 +2,13 @@
 % schlage sc1 key and user input to determine key bitting
 
 %terrible right now but works on high res photos pretty well
-%To do: clean up the loops with vectors, overlay bitting text on key,
+%To do: clean up the loops with vectors,
 %plot full key, add user directions and comment code, clean up config with
 %loops and vectors to minimize user effort and error
 clear
 try
     %key style config block
-    numPins     = 5
+    numPins     = 10
     bladeWidth  = 0.343;
     depthTol    = 0.002;
     root0       = 0.335;
@@ -87,9 +87,7 @@ try
             text(xtop,ytop-50,'9','Color','red','FontSize',25)
             test(i) = 9
         end
-        
     end
-    %close
 catch ME
     close
     ME.message
